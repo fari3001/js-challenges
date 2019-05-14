@@ -12,10 +12,16 @@
 
 // Define global variables here
 
-function setNumbers(num) {
-  // Your code here
-}
 var assert = require('assert');
+const myString = 'my string'
+var numbers = 7
+
+function setNumbers(num) {
+  return numbers = num;
+}
+setNumbers(2)
+
+
 
 describe('jsIntro', () => {
   it('checks that myString cannot be changed', function () {
