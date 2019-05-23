@@ -92,12 +92,12 @@ const upperCaseShopTitle = () => {
 
 const productById = (productId) => {
   // Return a specific product object
-for(let prod of shop.products) {
-  if (prod.id === productId) {
-    return prod
+  for (let prod of shop.products) {
+    if (prod.id === productId) {
+      return prod
+    }
   }
-} 
-return null 
+  return null
 }
 
 const productCost = (productId) => {
@@ -111,8 +111,8 @@ const orderById = (email, orderId) => {
   // given a customer email and order id, return the order
   for (let order of shop.customers[email].orders) {
     if (order.id === orderId)
-    return order
-  } 
+      return order
+  }
   return null
 }
 
@@ -127,10 +127,6 @@ const formatAddress = (email) => {
   addy = addressObject.streetNumber + " " + addressObject.street + ", " + addressObject.city + ", " + addressObject.postcode;
   addy += ""
   return addy
-
-  //   for(let add in shop.customers) {
-  //     `${add.name}`
-  // }
 }
 
 const totalCost = (email, orderId) => {
@@ -142,13 +138,13 @@ const totalCost = (email, orderId) => {
   // 2. Loop through order, call productCost with the product id for each order
   //    and multiple by quantity, then add to total
   for (let item of order.items) {
-   total += productCost(item.productId) * item.qty
+    total += productCost(item.productId) * item.qty
   }
 
   // if (orderId1 === 1) {
   //   return qty * productPrice
   return total
-  }
+}
 
 
 const addProduct = (id, title, price) => {
@@ -163,7 +159,7 @@ const addProduct = (id, title, price) => {
 
 const updateProductPrice = (id, newPrice) => {
   // Update the price of a specific product
-  let prod = productById(id) 
+  let prod = productById(id)
   prod.price = newPrice
   //   for (price in shop.products[id]) {
 
