@@ -20,6 +20,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 01_jsIntro
 =======
 * 01_jsIntro
@@ -33,12 +34,19 @@
 =======
 =======
 >>>>>>> 48212f5c79f2299d7abe5026d2a2f85ba77eaab2
+=======
+>>>>>>> 08425c5d87f223c83436d9b0bfe1297bd3e8c089
 * 01_jsIntro
 * 02_largestNumber
 * 03_openDoor
 * 04_objects
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7bdf8a4b4d78f2386d650eb9fbbee15fced4ab43
 =======
 * 05_sumNumbers
 >>>>>>> 48212f5c79f2299d7abe5026d2a2f85ba77eaab2
+=======
+* 05_sumNumbers
+* 06_hiddenMessage
+>>>>>>> 08425c5d87f223c83436d9b0bfe1297bd3e8c089
