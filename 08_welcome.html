@@ -1,0 +1,119 @@
+<!-- 
+  Run this file in your browser to see what it does.
+  Your challenge is to:
+  1. CSS: Give the page a touch of styling. Add some padding to the input box.
+  2. JS:
+     a) If the user deletes their name, 'Welcome, ' is still shown. Fix this.
+     b) Make the user's name show in uppercase.
+  Hints:
+  - Just like Ruby, you can check name.value doesn't equal "".
+  - JS has a helper method for uppercase.
+  Beast mode:
+  1. Add another input box, ask for firstname lastname
+ -->
+<!doctype html>
+<html>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower&display=swap" rel="stylesheet">
+
+<head>
+  <title>Welcome</title>
+
+  <style>
+    body {
+      font-family: 'Indie Flower', cursive;
+      text-align: center;
+      color: white;
+    }
+    #all{
+      background: linear-gradient(#e66465, #9198e5);
+    }
+
+    #title{
+      padding-bottom: 50px;
+      font-size: 70px;
+      text-decoration: underline;
+    }
+    #box {
+      padding: 30px 120px 30px 120px;
+      font-size: 30px;
+    }
+
+    #box2 {
+      padding: 30px 120px 30px 120px;
+      font-size: 30px;
+    }
+
+    ::-webkit-input-placeholder {
+      text-align: center;
+    }
+
+    :-moz-placeholder {
+      /* Firefox 18- */
+      text-align: center;
+    }
+
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      text-align: center;
+    }
+
+    :-ms-input-placeholder {
+      text-align: center;
+    }
+    
+    .container{
+      display: flex;
+      /* border: 2px solid red; */
+      flex-direction: column;      
+    }
+    #box {
+      /* border: 2px solid green; */
+    }
+    #box2{
+      /* border: 2px solid blue; */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="all">
+    <h1 id="title">Sign Up Page</h1>
+    <div class="container">
+    <input type="text" id="box" placeholder="Enter your first name">
+    <h1 id="first"></h1>
+
+    <input type="text" id="box2" placeholder="Enter your last name">
+    <h1 id="second"></h1>
+  </div>
+</div>
+</body>
+
+<script>
+  // FIRST NAME 
+  const name = document.querySelector('#box') // Selecting the input box id 
+  const welcomeMessage = document.querySelector('#first') // Selecting the output type 
+  name.onkeyup = function () {
+    if (name.value == "") {
+      welcomeMessage.textContent = ``;
+
+    } else {
+      // hint: name.value gives you the current text in the input box
+      welcomeMessage = `Welcome, ${name.value.toUpperCase()}!`;
+    }
+  }
+
+  const name2 = document.querySelector('#box2') // Selecting the input box id 
+  const welcomeMessage2 = document.querySelector('#second') // Selecting the output type 
+  name2.onkeyup = function () {
+    if (name2.value == "") {
+      welcomeMessage2.textContent = ``;
+
+    } else {
+      // hint: name.value gives you the current text in the input box
+      welcomeMessage2.textContent = `Welcome, ${name.value.toUpperCase() + " " + name2.value.toUpperCase()}!`;
+    }
+    
+  }
+</script>
+
+</html>
